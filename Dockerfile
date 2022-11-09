@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
+# Set the SHELL option -o pipefail before RUN with a pipe in
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # Download
 # Create a folder
 RUN mkdir actions-runner && cd actions-runner
