@@ -7,23 +7,23 @@ FROM ubuntu:20.04
 
 # Download
 # Create a folder
-CMD mkdir actions-runner && cd actions-runner
+RUN mkdir actions-runner && cd actions-runner
 
 # Download the latest runner package
-CMD curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.299.1/actions-runner-linux-x64-2.299.1.tar.gz
+RUN curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.299.1/actions-runner-linux-x64-2.299.1.tar.gz
 
 # Optional: Validate the hash
-CMD echo "147c14700c6cb997421b9a239c012197f11ea9854cd901ee88ead6fe73a72c74  actions-runner-linux-x64-2.299.1.tar.gz" | shasum -a 256 -c
+RUN echo "147c14700c6cb997421b9a239c012197f11ea9854cd901ee88ead6fe73a72c74  actions-runner-linux-x64-2.299.1.tar.gz" | shasum -a 256 -c
 
 # Extract the installer
-CMD tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
+RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 
 #Configure
 # Create the runner and start the configuration experience
-CMD ./config.sh --unattended --url https://github.com/mariocastronovo/acr-build-helloworld-node --token ABZU3MTMYH2XI7PHVQMUASTDNN5OS
+RUN ./config.sh --unattended --url https://github.com/mariocastronovo/acr-build-helloworld-node --token ABZU3MTMYH2XI7PHVQMUASTDNN5OS
 
 # Last step, run it!
-CMD ./run.sh
+CMD ./run.sh & wait $!
 
 # Using your self-hosted runner
 # Use this YAML in your workflow file for each job
