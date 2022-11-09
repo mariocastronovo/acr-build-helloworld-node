@@ -16,7 +16,7 @@ RUN curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/action
 
 # Extract the installer
 RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
-
+RUN pwd && ls
 RUN ./bin/installdependencies.sh
 
 #Configure
