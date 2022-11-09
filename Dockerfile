@@ -17,6 +17,8 @@ RUN curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/action
 # Extract the installer
 RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 
+RUN ./bin/installdependencies.sh
+
 #Configure
 # Create the runner and start the configuration experience
 # CMD [ "./config.sh", "--url https://github.com/mariocastronovo/acr-build-helloworld-node", "--token ABZU3MR4NPEOPOQSVI6PDOLDNPAW4"]
