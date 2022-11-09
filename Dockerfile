@@ -18,6 +18,9 @@ RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 # Create the runner and start the configuration experience
 # CMD [ "./config.sh", "--url https://github.com/mariocastronovo/acr-build-helloworld-node", "--token ABZU3MR4NPEOPOQSVI6PDOLDNPAW4"]
 
+# Copy out the runsvc.sh script to the root directory for running the service
+RUN cp bin/runsvc.sh . && chmod +x ./runsvc.sh
+
 # Last step, run it!
 COPY entrypoint.sh .
 RUN chmod +x ./entrypoint.sh
