@@ -4,9 +4,10 @@ FROM ubuntu:20.04
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Download
-# Create a folder
-RUN mkdir actions-runner
-WORKDIR actions-runner
+# Create an user and a folder
+RUN useradd -m actions-runner
+RUN mkdir -p /home/actions-runner
+WORKDIR /home/actions-runner
 
 # Download the latest runner package
 RUN apt-get update && apt-get install -y curl
