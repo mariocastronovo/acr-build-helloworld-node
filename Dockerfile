@@ -5,7 +5,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # Download
 # Create a folder
-RUN mkdir actions-runner && cd actions-runner
+RUN mkdir actions-runner
+WORKDIR actions-runner
 
 # Download the latest runner package
 RUN apt-get update && apt-get install -y curl
@@ -16,7 +17,6 @@ RUN curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/action
 
 # Extract the installer
 RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
-RUN pwd && ls
 RUN ./bin/installdependencies.sh
 
 #Configure
