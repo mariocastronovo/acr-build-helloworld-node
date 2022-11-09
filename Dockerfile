@@ -13,7 +13,7 @@ CMD curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/action
 # Optional: Validate the hash
 CMD echo "147c14700c6cb997421b9a239c012197f11ea9854cd901ee88ead6fe73a72c74  actions-runner-linux-x64-2.299.1.tar.gz" | shasum -a 256 -c
 # Extract the installer
-RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
+CMD tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 
 #Configure
 # Create the runner and start the configuration experience
