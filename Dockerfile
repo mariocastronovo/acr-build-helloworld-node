@@ -10,6 +10,7 @@ FROM ubuntu:20.04
 RUN mkdir actions-runner && cd actions-runner
 
 # Download the latest runner package
+RUN apt-get update && apt-get install -y curl
 RUN curl -o actions-runner-linux-x64-2.299.1.tar.gz -L https://github.com/actions/runner/releases/download/v2.299.1/actions-runner-linux-x64-2.299.1.tar.gz
 
 # Optional: Validate the hash
