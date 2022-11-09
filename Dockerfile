@@ -19,7 +19,7 @@ CMD tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 # Create the runner and start the configuration experience
 RUN ./config.sh --url https://github.com/mariocastronovo/acr-build-helloworld-node --token ABZU3MTMYH2XI7PHVQMUASTDNN5OS
 # Last step, run it!
-RUN ./run.sh
+CMD ./run.sh
 
 # Using your self-hosted runner
 # Use this YAML in your workflow file for each job
