@@ -1,10 +1,5 @@
 FROM ubuntu:20.04
 
-#COPY . /src
-#RUN cd /src && npm install
-#EXPOSE 80
-#CMD ["node", "/src/server.js"]
-
 # Download
 # Create a folder
 RUN mkdir actions-runner && cd actions-runner
