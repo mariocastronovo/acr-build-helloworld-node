@@ -24,6 +24,7 @@ RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 RUN ./config.sh --url https://github.com/mariocastronovo/acr-build-helloworld-node --token ABZU3MTMYH2XI7PHVQMUASTDNN5OS
 
 # Last step, run it!
+RUN chmod +x ./run.sh
 CMD [ "./run.sh"]
 
 # Using your self-hosted runner
