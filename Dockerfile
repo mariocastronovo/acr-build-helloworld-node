@@ -19,6 +19,7 @@ RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 # CMD [ "./config.sh", "--url https://github.com/mariocastronovo/acr-build-helloworld-node", "--token ABZU3MR4NPEOPOQSVI6PDOLDNPAW4"]
 
 # Last step, run it!
+COPY entrypoint.sh .
 RUN chmod +x ./entrypoint.sh
 CMD [ "./entrypoint.sh"]
 
