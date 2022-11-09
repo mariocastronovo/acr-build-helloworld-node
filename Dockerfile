@@ -21,7 +21,7 @@ RUN tar xzf ./actions-runner-linux-x64-2.299.1.tar.gz
 
 #Configure
 # Create the runner and start the configuration experience
-RUN [ "./config.sh", "--url https://github.com/mariocastronovo/acr-build-helloworld-node", "--token ABZU3MR4NPEOPOQSVI6PDOLDNPAW4"]
+CMD [ "./config.sh", "--url https://github.com/mariocastronovo/acr-build-helloworld-node", "--token ABZU3MR4NPEOPOQSVI6PDOLDNPAW4"]
 
 # Last step, run it!
 CMD [ "./run.sh"]
