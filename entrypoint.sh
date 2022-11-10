@@ -12,7 +12,7 @@ echo "Configuring GitHub Actions Runner and registering"
 ./config.sh \
     --unattended \
     --url "https://github.com/mariocastronovo/acr-build-helloworld-node" \
-    --token "ABZU3MR4NPEOPOQSVI6PDOLDNPAW4" \
+    --token "ABZU3MXKVDIHW34IZZIS7FTDNS5V6" \
     --name "mcstestrunner" \
     --runnergroup ${GROUP} \
     $OPTIONS
