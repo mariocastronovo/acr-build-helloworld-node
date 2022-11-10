@@ -30,6 +30,8 @@ RUN cp bin/runsvc.sh . && chmod +x ./runsvc.sh
 # Last step, run it!
 COPY entrypoint.sh .
 RUN chmod +x ./entrypoint.sh
+RUN chown -R actions-runner:actions-runner /home/actions-runner
+USER actions-runner
 CMD [ "./entrypoint.sh"]
 
 # Using your self-hosted runner
