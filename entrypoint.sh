@@ -50,6 +50,12 @@ fi
 RUNNER_URL=${RUNNER_REPOSITORY_URL}
 SCOPE=repos
 
+OPTIONS="${RUNNER_OPTIONS:-""}"
+# If the user has provided any runner labels add them to the config options
+if [[ -n ${RUNNER_LABELS} ]]; then
+    OPTIONS="${OPTIONS} --labels ${RUNNER_LABELS}"
+fi
+
 GROUP=${RUNNER_GROUP:-"default"}
 
 echo "Getting temporary access token for registering"
