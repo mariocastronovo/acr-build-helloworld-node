@@ -19,3 +19,4 @@ echo "Configuring GitHub Actions Runner and registering"
 
 echo "Starting GitHub Actions Runner"
 env -i ./runsvc.sh
+
