@@ -3,9 +3,9 @@ FROM ubuntu:20.04
 # Set the SHELL option -o pipefail before RUN with a pipe in
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-ENV GITHUB_TOKEN=""
-ENV GITHUB_SERVER=""
-ENV RUNNER_NAME=""
+ENV GITHUB_TOKEN="ABZU3MVJUHVV6X5NM37XG7LDNZZCE"
+ENV GITHUB_SERVER="github.com"
+ENV RUNNER_NAME="mcsrunner"
 
 # Download
 # Create an user and a folder
