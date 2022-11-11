@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eEo pipefail
+
 function error {
     echo "Error; $1"
 }
